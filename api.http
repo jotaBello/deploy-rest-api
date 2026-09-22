@@ -1,0 +1,33 @@
+### Recover all movies
+GET http://localhost:1234/movies
+
+### Recover a movie by id 
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+### Recover movies by genre
+GET http://localhost:1234/movies?genre=sci-fi
+
+### Create a new movie
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+"title": "Jurassic Park",
+"year": 1993,
+"director": "Steven Spielberg",
+"duration": 127,
+"poster": "https://vice-press.com/cdn/shop/products/Jurassic-Park-Editions-poster-florey.jpg?v=1654518755&width=1024",
+"genre": [
+    "Adventure",
+    "Sci-Fi"
+]
+} 
+
+### Update a movie
+PATCH http://localhost:1234/movies/64ef6604-94aa-4eb7-a926-2883b698ae13
+Content-Type: application/json
+
+{
+"title": "Jurassic Bark",
+"year": 1995
+} 
